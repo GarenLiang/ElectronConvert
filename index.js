@@ -31,3 +31,12 @@ ipcMain.on('videos:added', (event, videos) => {
       mainWindow.webContents.send('metadata:complete', results);
     });
 });
+
+ipcMain.on('conversion:start', (event, videos) => {
+  const video = videos[0];
+
+  const outputDirectory = video.path.split(video.name)[0];
+  const outputName = Video.name.split('.')[0]
+  const outputPath = `${outputDirectory}${outputName}.${video.format}`;
+  console.log(outputPath);
+});
