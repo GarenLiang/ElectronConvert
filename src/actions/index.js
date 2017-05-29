@@ -5,6 +5,9 @@ import { ADD_VIDEO, ADD_VIDEOS, REMOVE_VIDEO, REMOVE_ALL_VIDEOS, VIDEO_PROGRESS,
 // have been added and are pending conversion
 export const addVideos = videos => dispatch => {
   ipcRenderer.send('videos:added', videos);
+  ipcRenderer.on('metadata:complete', (event, videoWithData) => {
+    dispatch({ type: ADD_VIDEOS, payload: videoWithData });
+  });
 };
 
 
@@ -13,7 +16,7 @@ export const addVideos = videos => dispatch => {
 // from the MainWindow regarding the current state of
 // conversion.
 export const convertVideos = () => (dispatch, getState) => {
-
+  ipcRenderer.send('conversion:start', videos);
 };
 
 // TODO: Open the folder that the newly created video
