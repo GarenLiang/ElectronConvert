@@ -14,11 +14,13 @@ class ConvertPanel extends Component {
   render() {
     return (
       <div className="convert-panel">
-        <button className="btn red" onClick={this.onCancelPressed}>
+        <button className="btn red accent-2" onClick={this.onCancelPressed}>
+        <i className="small material-icons left" >delete</i>
           Cancel
         </button>
-        <button className="btn" onClick={this.props.convertVideos.bind(null, this.props.videos)}>
-          Convert!
+        <button className="btn green accent-2" onClick={this.props.convertVideos.bind(null, this.props.videos)}>
+          <i className="small material-icons left">loop</i>
+          Convert
         </button>
       </div>
     );
