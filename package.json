@@ -1,13 +1,13 @@
 {
-  "name": "timer",
+  "name": "Convert",
   "version": "1.0.0",
-  "description": "Electron timer app",
+  "description": "Electron conversion app",
   "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server",
     "electron": "electron ."
   },
-  "author": "Rallycoding",
+  "author": "",
   "devDependencies": {
     "electron": "~1.6.2"
   },
