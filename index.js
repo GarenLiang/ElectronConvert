@@ -8,8 +8,10 @@ let mainWindow;
 
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
+    titleBarStyle: 'hidden',
     height: 600,
     width: 800,
+    backgroundColor: '#FFFAF0',
     webPreferences: { backgroundThrottling: false }
   });
   mainWindow.loadURL(`file://${__dirname}/src/index.html`);
