@@ -12,3 +12,5 @@ In a new terminal window:
 # Electron Convert Project
 
 ![image](https://github.com/GarenLiang/ElectronConvert/blob/master/Snap.gif)
+![image](https://github.com/GarenLiang/ElectronConvert/blob/master/Balsamiq1.png)
+![image](https://github.com/GarenLiang/ElectronConvert/blob/master/Balsamiq2.png)
