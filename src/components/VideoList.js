@@ -19,7 +19,7 @@ class VideoList extends Component {
   showStatus({ complete, timemark, outputPath, err }) {
     if (complete) {
       return (
-        <button onClick={() => this.props.onFolderOpen(outputPath)} className="btn">
+        <button onClick={() => this.props.onFolderOpen(outputPath)} className="btn light-blue accent-3">
           Open Folder
         </button>
       );

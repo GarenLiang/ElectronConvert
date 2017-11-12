@@ -12,7 +12,7 @@ app.on('ready', () => {
     height: 600,
     width: 800,
     backgroundColor: '#FFFAF0',
-    webPreferences: { backgroundThrottling: false }
+    webPreferences: { backgroundThrottling: false,'web-security': false }
   });
   mainWindow.loadURL(`file://${__dirname}/src/index.html`);
 });
