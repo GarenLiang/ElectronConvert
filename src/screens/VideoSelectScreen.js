@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-
 class VideoSelectScreen extends Component {
   state = {
     hovering: false
@@ -17,7 +16,7 @@ class VideoSelectScreen extends Component {
 
     if (videos.length) {
       this.props.addVideos(videos);
-      
+
       if (!this.props.small) {
         this.props.history.push('/convert');
       }
@@ -29,9 +28,9 @@ class VideoSelectScreen extends Component {
     if (isDragActive) {
       return <h4 className="drop-message">Omnomnom, let me have those videos!</h4>;
     } else if (isDragReject) {
-      return <h4 className="drop-message">Uh oh, I don't know how to deal with that type of file!</h4>;
+      return <h4 className="drop-message">Uh oh, I dont know how to deal with that type of file!</h4>;
     } else {
-      return <h4 className="drop-message">Drag and drop some files on me, or click to select.</h4>
+      return <h4 className="drop-message"><img src="assets/click (4).png" />Drag and drop some files on me, or click to select.</h4>
     }
   }
 
